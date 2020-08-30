@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         noteViewModel.getAllNotes().observe(this, new Observer<List<Note>>() {
             @Override
             public void onChanged(List<Note> notes) {
-                noteAdapter.setNoteList(notes);
+                noteAdapter.submitList(notes);
             }
         });
         fabAddNote.setOnClickListener(this);
